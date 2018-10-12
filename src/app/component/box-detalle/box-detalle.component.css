@@ -1,0 +1,16 @@
+.box-detalle{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.box-detalle1{
+    width: 70%;
+    height: 20rem;
+    border-radius: 1rem;
+    background-color: rgba(14, 13, 43, 0.5);
+}
+h3{
+    font-family: fantasy;
+    text-align: center;
+}

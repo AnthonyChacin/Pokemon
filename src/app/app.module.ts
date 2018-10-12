@@ -10,6 +10,7 @@ import { DetalleComponent } from './view/detalle/detalle.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { BoxDetalleComponent } from './component/box-detalle/box-detalle.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     DetalleComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    BoxDetalleComponent
   ],
   imports: [
     AlertModule.forRoot(),
