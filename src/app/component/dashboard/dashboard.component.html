@@ -10,7 +10,7 @@
       <div>
         Pokedex number: {{pokemon.pkdx_id}}
       </div>
-      <a routerLink='/home/detalle'><img src={{pokemon.art_url}} width="100%" height="100%" class="img"></a>
+      <a routerLink='/home/detalle' (click)='onShowDetalle(pokemon.name)'><img src={{pokemon.art_url}} width="100%" height="100%" class="img"></a>
     </div>
   </div>
 </div>
