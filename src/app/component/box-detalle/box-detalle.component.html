@@ -1,47 +1,43 @@
 <br>
-<h3>Detalle del Pokémon</h3>
-<br>
 <div class="row box-detalle" *ngFor="let pokemon of dataBase.pokemons">
 
   <div class="col-12 box-detalle1" *ngIf="pokemon.name === name_pokemon1">
-    <div class="row">
-      <div class="col-12">
-        <div>
-          Nombre: {{pokemon.name}}
-        </div>
-        <div>
-          Descripción: {{pokemon.description}}
-        </div>
-        <div>Tipo:
+    <div class="row special-row">
+      <div class="col-2">
+        <h4 class="display-5">{{pokemon.name}}</h4>
+        <div>Type:
           <ul>
             <li *ngFor="let tipo of pokemon.types">{{tipo}}</li>
           </ul>
         </div>
       </div>
+      <div class="col-10">
+        {{pokemon.description}}
+      </div>
     </div>
     <div *ngIf="pokemon.evolutions.length != 0">
-      <div class="row">
+      <div class="row evoluciones">
         <div class="col-12">
-          <h4>Evoluciones</h4>
+          <h4>Evolutions</h4>
         </div>
       </div>
       <div class="row evoluciones" *ngFor="let evolution of pokemon.evolutions">
-
-        <div class="col-3">Nombre:
+        <br>
+        <div class="col-3">
           <div>{{evolution.to}}</div>
         </div>
-        <div class="col-3">Imagen:
+        <div class="col-3">
           <div *ngFor="let pokemon of dataBase.pokemons">
             <div *ngIf="pokemon.name === evolution.to">
               <img src={{pokemon.art_url}} width="100%" height="100%" class="img">
             </div>
           </div>
         </div>
-        <div class="col-3">Nivel:
+        <div class="col-3">Level:
           <div *ngIf="evolution.level != null">{{evolution.level}}</div>
           <div *ngIf="evolution.level == null">No level</div>
         </div>
-        <div class="col-3">Método:
+        <div class="col-3">Method:
           <div>{{evolution.method}}</div>
         </div>
       </div>
