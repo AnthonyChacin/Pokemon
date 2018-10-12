@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DataBaseService } from './service/data-base.service';
+import { DataDetallesService } from './service/data-detalles.service';
 import { AppComponent } from './app.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +29,7 @@ import { BoxDetalleComponent } from './component/box-detalle/box-detalle.compone
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [DataBaseService],
+  providers: [DataBaseService, DataDetallesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
