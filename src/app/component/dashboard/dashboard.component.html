@@ -1,16 +1,22 @@
 <br>
-<h3>Pokémon's</h3>
+<h3 class="display-4">Pokémon</h3>
 <br>
 <div class="row container-pokemons">
-  <div class="col-4 container-pokemon" *ngFor='let pokemon of dataBase.pokemons'>
+  <div class="col-3 container-pokemon" *ngFor='let pokemon of dataBase.pokemons'>
     <div class="container-pokemon1">
-      <div>
-        Name: {{pokemon.name}}
+      <div class="row">
+        <div class="col-6">
+          <h4 class="display-5 poke-name">{{pokemon.name}}</h4>
+        </div>
+        <div class="col-6">
+          <h4 class="display-5 poke-num">{{pokemon.pkdx_id}}</h4>
+        </div>
       </div>
       <div>
         Pokedex number: {{pokemon.pkdx_id}}
       </div>
-      <a routerLink='/home/detalle' (click)='onShowDetalle(pokemon.name)'><img src={{pokemon.art_url}} width="100%" height="100%" class="img"></a>
+      <a routerLink='/home/detalle' (click)='onShowDetalle(pokemon.name)'><img src={{pokemon.art_url}} width="100%"
+          height="100%" class="img" data-toggle="tooltip" data-placement="top" title="Haga click en el Pokémon para ver su detalle"></a>
     </div>
   </div>
 </div>
