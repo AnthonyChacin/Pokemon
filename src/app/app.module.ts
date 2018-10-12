@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { DataBaseService } from './service/data-base.service';
 import { AppComponent } from './app.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +28,7 @@ import { DashboardComponentComponent } from './component/dashboard-component/das
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataBaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
