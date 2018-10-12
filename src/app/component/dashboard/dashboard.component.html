@@ -12,8 +12,8 @@
           <h4 class="display-5 poke-num">{{pokemon.pkdx_id}}</h4>
         </div>
       </div>
-      <a routerLink='/home/detalle'><img src={{pokemon.art_url}} width="100%" height="100%" class="img" data-toggle="tooltip"
-          data-placement="top" title="Haz click para ver el detalle del Pokemon"></a>
+      <a routerLink='/home/detalle' (click)='onShowDetalle(pokemon.name)'><img src={{pokemon.art_url}} width="100%"
+          height="100%" class="img" data-toggle="tooltip" data-placement="top" title="Haz click para ver el detalle del Pokémon"></a>
     </div>
   </div>
 </div>

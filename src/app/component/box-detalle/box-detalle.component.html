@@ -1,36 +1,59 @@
 <br>
 <h3>Detalle del Pokémon</h3>
 <br>
-<div class="row box-detalle">
+<div class="row box-detalle" *ngFor="let pokemon of dataBase.pokemons">
 
-  <div class="col-12 box-detalle1">
+  <div class="col-12 box-detalle1" *ngIf="pokemon.name === name_pokemon1">
     <div class="row">
       <div class="col-12">
         <div>
-          Nombre:
+          Nombre: {{pokemon.name}}
         </div>
         <div>
-          Descripción:
+          Descripción: {{pokemon.description}}
         </div>
-        <ul>
-          Tipo:
-        </ul>
-
-      </div>
-      <div class="col-12">
-        <h4>Evoluciones</h4>
+        <div>Tipo:
+          <ul>
+            <li *ngFor="let tipo of pokemon.types">{{tipo}}</li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div *ngIf="pokemon.evolutions.length != 0">
+      <div class="row">
+        <div class="col-12">
+          <h4>Evoluciones</h4>
+        </div>
+      </div>
+      <div class="row evoluciones" *ngFor="let evolution of pokemon.evolutions">
 
-    <div class="row evoluciones">
-
-      <div class="col-3">Nombre:</div>
-      <div class="col-3">Imagen:</div>
-      <div class="col-3">Nivel:</div>
-      <div class="col-3">Método:</div>
+        <div class="col-3">Nombre:
+          <div>{{evolution.to}}</div>
+        </div>
+        <div class="col-3">Imagen:
+          <div *ngFor="let pokemon of dataBase.pokemons">
+            <div *ngIf="pokemon.name === evolution.to">
+              <img src={{pokemon.art_url}} width="100%" height="100%" class="img">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">Nivel:
+          <div *ngIf="evolution.level != null">{{evolution.level}}</div>
+          <div *ngIf="evolution.level == null">No level</div>
+        </div>
+        <div class="col-3">Método:
+          <div>{{evolution.method}}</div>
+        </div>
+      </div>
     </div>
-
   </div>
 
 </div>
+
+<br>
+
+<div class="row container-button">
+  <div class="col-12"><button type="button" class="btn btn-dark" routerLink="/home">Back</button></div>
+</div>
+
 <br>

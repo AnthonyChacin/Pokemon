@@ -6,7 +6,7 @@
 }
 .box-detalle1{
     width: 70%;
-    height: 20rem;
+    height: 100%;
     border-radius: 1rem;
     background-color: rgb(0, 0, 0);
     color: white;
@@ -21,4 +21,9 @@ h4{
 
 .evoluciones{
     background-color: rgba(32, 31, 31, 0.856);
+    text-align: center;
+}
+.container-button{
+    text-align: center;
+    align-content: center;
 }
