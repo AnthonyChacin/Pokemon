@@ -9,7 +9,11 @@ import { DataBaseService } from 'src/app/service/data-base.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(service:DataBaseService) { }
+  dataBase: DataBaseService;
+
+  constructor(service:DataBaseService) {
+    this.dataBase = service;
+   }
 
   ngOnInit() {
   }
