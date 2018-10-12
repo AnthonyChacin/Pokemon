@@ -6,7 +6,7 @@
     max-width: 100%;
     z-index: 0;
     max-height: 100%;
-    background-color: rgba(32, 31, 31, 0.856);
+    background-color: red;
 }
 .navbar-propio img{
     z-index: 0;
