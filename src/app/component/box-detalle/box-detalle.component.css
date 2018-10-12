@@ -15,3 +15,10 @@ h3{
     font-family: fantasy;
     text-align: center;
 }
+h4{
+    text-align: center;  
+}
+
+.evoluciones{
+    background-color: rgba(32, 31, 31, 0.856);
+}
