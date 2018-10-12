@@ -9,6 +9,7 @@ h3{
     font-family: fantasy;
 }
 h4{
+    text-size-adjust: 10%;
     padding: 5%;
 }
 .container-pokemon{
@@ -33,4 +34,7 @@ h4{
 .poke-num{
     text-align: right;
     padding-right: 10%;
+}
+.poke-name{
+    text-align: left;
 }
