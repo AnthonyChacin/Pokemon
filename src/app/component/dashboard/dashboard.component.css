@@ -2,14 +2,19 @@
     height: 100%;
     width: 100%;
     margin-left: 0.18rem;
+    
 }
 h3{
     text-align: center;
     font-family: fantasy;
 }
+h4{
+    padding: 5%;
+}
 .container-pokemon{
     text-align: center;
     font-family: fantasy;
+    
     
 }
 .container-pokemon1{
@@ -20,4 +25,8 @@ h3{
 }
 .img{
     z-index: 1;
+}
+.img:hover{
+    background-color: rgba(32, 31, 31, 0.856);
+    transition:all .5s ease-in-out;
 }
