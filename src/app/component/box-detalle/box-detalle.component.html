@@ -18,14 +18,11 @@
     <div *ngIf="pokemon.evolutions.length != 0">
       <div class="row evoluciones">
         <div class="col-12">
-          <h4>Evolutions</h4>
+          <h4 class="display-4">Evolutions</h4>
         </div>
       </div>
       <div class="row evoluciones" *ngFor="let evolution of pokemon.evolutions">
         <br>
-        <div class="col-3">
-          <div>{{evolution.to}}</div>
-        </div>
         <div class="col-3">
           <div *ngFor="let pokemon of dataBase.pokemons">
             <div *ngIf="pokemon.name === evolution.to">
@@ -33,11 +30,14 @@
             </div>
           </div>
         </div>
-        <div class="col-3">Level:
+        <div class="col-3">
+          <h4 class="display-5">{{evolution.to}}</h4>
+        </div>
+        <div class="col-3"><h4 class="display-5">Level:</h4>
           <div *ngIf="evolution.level != null">{{evolution.level}}</div>
           <div *ngIf="evolution.level == null">No level</div>
         </div>
-        <div class="col-3">Method:
+        <div class="col-3"><h4 class="display-5">Method:</h4>
           <div>{{evolution.method}}</div>
         </div>
       </div>
