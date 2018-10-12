@@ -9,6 +9,7 @@ import { HomeComponent } from './view/home/home.component';
 import { DetalleComponent } from './view/detalle/detalle.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './component/footer/footer.component';
     HomeComponent,
     DetalleComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent
   ],
   imports: [
     AlertModule.forRoot(),
