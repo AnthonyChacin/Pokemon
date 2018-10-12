@@ -4,10 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeNavigationComponent } from './navigation/home-navigation/home-navigation.component';
+import { HomeComponent } from './view/home/home.component';
+import { DetalleComponent } from './view/detalle/detalle.component';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeNavigationComponent,
+    HomeComponent,
+    DetalleComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     AlertModule.forRoot(),
