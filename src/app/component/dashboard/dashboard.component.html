@@ -2,7 +2,15 @@
 <h3>Pokémon's</h3>
 <br>
 <div class="row container-pokemons">
-  <div class="col-12">
-
+  <div class="col-4 container-pokemon" *ngFor='let pokemon of dataBase.pokemons'>
+    <div class="container-pokemon1">
+      <div>
+        Name: {{pokemon.name}}
+      </div>
+      <div>
+        Pokedex number: {{pokemon.pkdx_id}}
+      </div>
+      <a routerLink='/home/detalle'><img src={{pokemon.art_url}} width="100%" height="100%" class="img"></a>
+    </div>
   </div>
 </div>

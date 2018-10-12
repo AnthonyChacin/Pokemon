@@ -1,9 +1,23 @@
-
 .container-pokemons{
     height: 100%;
     width: 100%;
+    margin-left: 0.18rem;
 }
 h3{
     text-align: center;
     font-family: fantasy;
+}
+.container-pokemon{
+    text-align: center;
+    font-family: fantasy;
+    
+}
+.container-pokemon1{
+    margin: 0.5rem;
+    background-color: rgba(0, 0, 0);
+    border-radius: 0.5rem;
+    color: rgb(230, 216, 22);
+}
+.img{
+    z-index: 1;
 }
