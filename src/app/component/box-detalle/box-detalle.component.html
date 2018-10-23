@@ -1,13 +1,13 @@
 <br>
-<div class="row box-detalle" *ngFor="let pokemon of dataBase.pokemons">
+<div class="row box-detalle" >
 
-  <div class="col-12 box-detalle1" *ngIf="pokemon.name === name_pokemon1">
+  <div class="col-12 box-detalle1" >
     <div class="row special-row">
       <div class="col-2">
         <h4 class="display-5">{{pokemon.name}}</h4>
         <div>Type:
           <ul>
-            <li *ngFor="let tipo of pokemon.types">{{tipo}}</li>
+            <li *ngFor = "let tipo of pokemon.types">{{tipo}}</li>
           </ul>
         </div>
       </div>
@@ -24,8 +24,9 @@
       <div class="row evoluciones" *ngFor="let evolution of pokemon.evolutions">
         <br>
         <div class="col-3">
-          <div *ngFor="let pokemon of dataBase.pokemons">
-            <div *ngIf="pokemon.name === evolution.to">
+          <div >
+            <div >
+              <h1>{{pokemon.name}}</h1>
               <img src={{pokemon.art_url}} width="100%" height="100%" class="img">
             </div>
           </div>

@@ -9,16 +9,11 @@ const routes: Routes = [
         path: '',
         children: [
             { path: '', redirectTo: '/home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent }
-        ], component: HomeNavigationComponent
-    },
-    {
-        path: 'home',
-        children: [
-            { path: 'home', redirectTo: '/home/detalle', pathMatch: 'full' },
-            { path: 'detalle', component: DetalleComponent }
+            { path: 'home', component: HomeComponent },
+            { path: 'detalle/:id', component: DetalleComponent }
         ], component: HomeNavigationComponent
     }
+
 
 ]
 @NgModule({

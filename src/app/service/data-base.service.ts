@@ -4650,4 +4650,15 @@ export class DataBaseService {
   ]
 
   constructor() { }
+  getById(id : String){
+    console.log(id);
+    let pokemon;
+    for(let i = 0; i < this.pokemons.length; i++){
+      if(this.pokemons[i]._id === id.toString()){
+        pokemon= this.pokemons[i];
+        break;
+      }
+    }
+    return pokemon;
+  }
 }
